@@ -1,5 +1,7 @@
 body{
   background-image: url(Bimage.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 header{
@@ -14,7 +16,7 @@ header{
 }
 
 #survey-form{
-  background-color:#FFFFFF;
+  background-color:#ffffff85;
   font-family:Quicksand;
   max-width:70%;
   margin:auto;
