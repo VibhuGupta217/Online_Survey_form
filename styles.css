@@ -12,11 +12,15 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
-
+html {
+  height: 100%;
+}
 body {
   background-image: url(Bgimage.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  margin: 0px;
+  padding: 0px;
   background-size: cover;
 }
 
@@ -59,13 +63,20 @@ header {
 }
 
 #survey-form div input,
+#survey-form div textarea,
 #survey-form div select {
   width: 300px;
-  padding: 10px;
+  padding: 5px;
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 4px;
   transition: background-color 0.2s;
+}
+
+#survey-form div textarea {
+  resize: vertical;
+  min-height: 40px;
+  max-height: 150px;
 }
 #survey-form div input:hover,
 #survey-form div select:hover {
@@ -85,16 +96,4 @@ button {
 
 button:hover {
   background-color: #ccc;
-}
-
-@media (max-width: 800px) {
-  body {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 580px) {
-  body {
-    font-size: 9px;
-  }
 }

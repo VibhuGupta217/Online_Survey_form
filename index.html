@@ -3,7 +3,8 @@
   <head>
     <title>Survey Form</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       href="https://fonts.googleapis.com/css?family=Quicksand|Roboto"
       rel="stylesheet"
@@ -73,6 +74,14 @@
           <option value="Not-likely">Not Likely</option>
         </select>
       </div>
+
+      <div id="review-field">
+        <label for="review"
+          >Could you please take some time to give a review?</label
+        >
+        <textarea name="review" id="review"></textarea>
+      </div>
+
       <button class="btn" type="submit">Submit</button>
     </form>
   </body>
