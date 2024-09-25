@@ -4,82 +4,76 @@
     <title>Survey Form</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand|Roboto"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-  <header>
-  <div id="title"><h1>Trés Bien!</h1>
+    <header>
+      <h1>Trés Bien!</h1>
     </header>
 
-<form id="survey-form">
+    <form id="survey-form">
+      <div id="order-number-field">
+        <label class="order-number" for="order-number">Order Number:</label>
+        <input
+          type="number"
+          name="order-number"
+          id="order-number"
+          placeholder="Enter the number on your receipt"
+        />
+      </div>
 
-  <div id="description"> Let us know how we can improve our service</div><br>
+      <div id="email-field">
+        <label class="text-input" for="email">Email:</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="yourname@example.com"
+        />
+      </div>
 
-  <fieldset class="fieldset">
+      <div id="frequency-menu">
+        <label for="frequency">How often you visit?</label>
 
-    <div class="sub-group">
-      <label class="left" id="name-label" for="name">Name:</label>
-    <input type="text" name="customer-name" class="right input-field" id="name" placeholder="Enter your name" required>
-    </div>
+        <select id="frequency" name="frequency">
+          <option selected disabled>Select an option</option>
+          <option value="regular">Regular</option>
+          <option value="occasionally">Occasionally</option>
+          <option value="never">Never Before</option>
+        </select>
+      </div>
 
-    <div class="sub-group">
-      <label class="left" id="email-label" for="email">Email:</label>
-    <input type="email" name="Email-address" class="right input-field" placeholder="Enter your email" id="email" required>
-    </div>
+      <div id="age-menu">
+        <label for="age">Which age group do you belong to?</label>
 
-    <div class="sub-group">
-      <label  class="left" id="number-label" for="number">Age:</label>
-    <input type="number" name="Age" placeholder="Age" min="1" max="100" class="right input-field" id="number">
-  </div>
-    <div class="sub-group">
-      <label class="left" for="dropdown">How often you visit?</label>
+        <select id="age" name="age">
+          <option selected disabled>Select an option</option>
+          <option value="10-16">10 - 16</option>
+          <option value="16-20">16 - 20</option>
+          <option value="20-30">20 - 30</option>
+          <option value="30-40">30 - 40</option>
+          <option value="40+">40 +</option>
+        </select>
+      </div>
 
-      <select class="right dropdown" id="dropdown" name="dropdown">
-        <option selected disabled>Select an option</option>
-        <option value="first">Regular</option>
-        <option value="never">Never Before</option>
-      </select>
-    </div>
-  </fieldset>
+      <div id="recommend-menu">
+        <label for="recommend"
+          >If you were to recomment a restarunt in this area, how likely are you
+          to recommend us?</label
+        >
 
-  <fieldset class="fieldset">
-<div class="sub-group">
-<label class="left">
-  How much would you rate us?</label>
-
- <ul style="list-style: none;" class="right">
-
-   <li class="checkbox"><label><input type="checkbox" name="game" value="exodus" >Excellent</label></li>
-     <li class="checkbox"><label><input type="checkbox" name="game" value="alcatraz">Very Satisfied</label></li>
-     <li class="checkbox"><label><input type="checkbox" name="game" value="aokigahara" >Satisfied<label></li>
-     <li class="checkbox"><label><input type="checkbox" name="game" value="mausoleum" >Poor</label></li>
-     <li class="checkbox"><label><input type="checkbox" name="game" value="castiglione" >Very Poor</label></li>
-       </ul></div></fieldset>
-
-    <fieldset class="fieldset">
-  <div class="sub-group">
-  <label class="left" id="left-radio">Will you recommend to Others?</label>
-
-   <ul style="list-style: none" class="right">
-       <li class="radio"><label><input name="radio-buttons" value="1" type="radio" class="recommendation">Yes</label></li>
-       <li class="radio"><label><input name="radio-buttons" value="2" type="radio" class="recommendation">Maybe</label></li>
-       <li class="radio"><label><input name="radio-buttons" value="3" type="radio" class="recommendation">No</label></li>
-   </ul>
-  </div></fieldset>
-
-     <fieldset class="fieldset">
-   <h2>Any comments or suggestions?</h2>
-
-    <div class="commentbox">
-
-   <textarea rows="4"  placeholder="Enter your comment here..."></textarea>
-
-   <br></br>
-
-  <button id="submit" type="submit">Submit</button>
-       </div></fieldset>
-</form>
-</div>
+        <select id="recommend" name="recommend">
+          <option selected disabled>Select an option</option>
+          <option value="very-likely">Very likely</option>
+          <option value="much-likely">Likely</option>
+          <option value="Not-likely">Not Likely</option>
+        </select>
+      </div>
+      <button class="btn" type="submit">Submit</button>
+    </form>
   </body>
 </html>
